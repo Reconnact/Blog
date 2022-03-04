@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>My Website</title>
+    <script src="tic-tac-toe.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="tic.ico">
+  </head>
+  <main>
+    <p id="v"></p>
+    <h1>Tic Tac Toe!</h1>
+    <a href="../index.html">← back</a>
+    <div class="win" id="win">
+        <h1 id="winner"></h1>
+        <button onclick="playAgain()" class="play_again">PLAY AGAIN!</button>
+    </div>
+    <script src="tic-tac-toe.js"></script>
+    <div class="container" id ="container">
+        <div class="top_row">
+            <button class="fields" onclick="myFunction(1)" id="1"></button>
+            <button class="fields" onclick="myFunction(2)" id="2"></button>
+            <button class="fields" onclick="myFunction(3)" id="3"></button>
+        </div>
+        <div class="middle_row">
+            <button class="fields" onclick="myFunction(4)" id="4"></button>
+            <button class="fields" onclick="myFunction(5)" id="5"></button>
+            <button class="fields" onclick="myFunction(6)" id="6"></button>
+        </div>
+        <div class="bottom_row">
+            <button class="fields" onclick="myFunction(7)" id="7"></button>
+            <button class="fields" onclick="myFunction(8)" id="8"></button>
+            <button class="fields" onclick="myFunction(9)" id="9"></button>
+        </div>
+    </div>
+    <h3 id="rules">Rules:</h3>
+    <p id="explantation">The object of Tic Tac Toe is to get three in a row. You play on a three by three game board.
+     The first player is known as X and the second is O.
+     Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled.
+     X always goes first, and in the event that no one has three in a row, the game ends as a Tie.</p>
+    <script src="tic-tac-toe.js"></script>
+  </main>
+</html>

@@ -1,0 +1,117 @@
+main {
+  background-color: white;
+  border: 4px solid #444444;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-bottom: 5%;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.container {
+  width: 450px;
+  height: 433px;
+  border-style: solid;
+  margin: auto;
+}
+
+.fields {
+  width: 150px;
+  height: 144px;
+  border-style: ridge;
+  background-color: rgb(221, 218, 218);
+  font-size: 100px;
+}
+
+.fields:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+
+.top_row {
+  display: flex;
+}
+
+.middle_row {
+  display: flex;
+}
+
+.bottom_row {
+  display: flex;
+}
+
+.win {
+  visibility: hidden;
+  color: red;
+}
+
+.play_again {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.play_again:hover,
+.play_again:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.play_again:hover {
+  transform: translateY(-1px);
+}
+
+.play_again:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Lucida Console", "Courier New";
+  color: rgb(174, 0, 255);
+  display: inline-block;
+  transition: 300ms;
+}
+
+a:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #019fb6;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+
+a:hover:after {
+  color: rgb(203, 110, 247);
+  transform: scaleX(1);
+  cursor: pointer;
+}

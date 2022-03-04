@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>My Website</title>
+    <script src="tic-tac-toe.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="tic.ico">
+  </head>
+  <main>
+    <script src="hangman.js"></script>
+    <h1>Hangman!</h1>
+    <a href="../index.html">← back</a>
+    <div><h1 id="result" class="result"></h1><p id="stats" class="stats"></p></div>
+    <button onclick="playAgain()" class="play_again" id="play_again">PLAY AGAIN!</button>
+    <div class="drawing"><img src="img/hangman0.jpg" id="drawing"></div>
+    <div class="word"><p id="word">hello</p></div>
+    <div class="alphabet" id="alphabet">
+        <button class="letter" id="a" onclick="isInWord('a')">a</button>
+        <button class="letter" id="b" onclick="isInWord('b')">b</button>
+        <button class="letter" id="c" onclick="isInWord('c')">c</button>
+        <button class="letter" id="d" onclick="isInWord('d')">d</button>
+        <button class="letter" id="e" onclick="isInWord('e')">e</button>
+        <button class="letter" id="f" onclick="isInWord('f')">f</button>
+        <button class="letter" id="g" onclick="isInWord('g')">g</button>
+        <button class="letter" id="h" onclick="isInWord('h')">h</button>
+        <button class="letter" id="i" onclick="isInWord('i')">i</button>
+        <button class="letter" id="j" onclick="isInWord('j')">j</button>
+        <button class="letter" id="k" onclick="isInWord('k')">k</button>
+        <button class="letter" id="l" onclick="isInWord('l')">l</button>
+        <button class="letter" id="m" onclick="isInWord('m')">m</button>
+        <button class="letter" id="n" onclick="isInWord('n')">n</button>
+        <button class="letter" id="o" onclick="isInWord('o')">o</button>
+        <button class="letter" id="p" onclick="isInWord('p')">p</button>
+        <button class="letter" id="q" onclick="isInWord('q')">q</button>
+        <button class="letter" id="r" onclick="isInWord('r')">r</button>
+        <button class="letter" id="s" onclick="isInWord('s')">s</button>
+        <button class="letter" id="t" onclick="isInWord('t')">t</button>
+        <button class="letter" id="u" onclick="isInWord('u')">u</button>
+        <button class="letter" id="v" onclick="isInWord('v')">v</button>
+        <button class="letter" id="w" onclick="isInWord('w')">w</button>
+        <button class="letter" id="x" onclick="isInWord('x')">x</button>
+        <button class="letter" id="y" onclick="isInWord('y')">y</button>
+        <button class="letter" id="z" onclick="isInWord('z')">z</button>
+    </div>
+    <h3 id="rules">Rules:</h3>
+    <p id="explantation">The goal is to guess the word, which is displayed as underscores.
+       With a click on a letter above you can see whether this is included in the word or not.
+        If you guess six times wrong, you lose.
+        However, if you can guess every letter in the word, you win!
+        It's not hard, you get the hang of it.</p>
+  </main>
+</html>
