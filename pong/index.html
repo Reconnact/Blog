@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <title>Pong</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="navigator">Home</a>
+        <a href="blog/" class="navigator">Blog</a>
+    </header>
+    <main>
+        <div class="content">
+            <canvas id="pong" width="600" height="400"></canvas>
+            <script src="pong.js"></script>
+        </div>
+        <p style="color: red; display: none; margin-top: -2%;" id="terminateMsg">Press ESC to terminate</p>
+        <button onclick="start()" id="startButton" class="startButton">Play!</button>
+        <button onclick="restart()" id="restartButton" class="startButton" style="display: none;">Play again</button>
+
+    </main>
+    <footer>
+    <a href="https://www.instagram.com/hermy._zh/" target="”_blank”" class="link">📷 My insta</a>
+    <a></a>
+</footer>
+</body>
+</html>
