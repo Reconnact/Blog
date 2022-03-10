@@ -9,11 +9,8 @@
     <title>Pong</title>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="navigator">Home</a>
-        <a href="blog/" class="navigator">Blog</a>
-    </header>
     <main>
+        <a href="../index.html" class="backBtn" style="margin-top: 5%;">← back</a>
         <div class="content">
             <canvas id="pong" width="600" height="400"></canvas>
             <script src="pong.js"></script>
@@ -25,7 +22,11 @@
     </main>
     <footer>
     <a href="https://www.instagram.com/hermy._zh/" target="”_blank”" class="link">📷 My insta</a>
-    <a></a>
+    <script>window.addEventListener("keydown", function(e) {
+        if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+            e.preventDefault();
+        }
+    }, false);</script>
 </footer>
 </body>
 </html>

@@ -1,7 +1,7 @@
 const canvas = document.getElementById("pong");
 const context = canvas.getContext("2d");
 var keys=[];
-var speed = 50;
+var speed = 100;
 var enabled = false;
 
 const player1 = {
@@ -26,7 +26,7 @@ const ball = {
     x : canvas.width/2, 
     y : canvas.height/2,
     r : 10,
-    speed: 5,
+    speed: 1,
     velocityX : 5,
     velocityY : 5,
     color : "white"
@@ -74,9 +74,11 @@ function collision(b, p){
     b.bottom = b.y + b.r;
     b.left = b.x - b.r;
     b.right = b.x + b.r;
-
+    
     return b.right > p.left && b.bottom > p.top && b.left < p.right && b.top < p.bottom;
+    
 }
+
 
 function drawRect(x, y, r, h, color){
     context.fillStyle = color; 
@@ -84,12 +86,13 @@ function drawRect(x, y, r, h, color){
 }
 
 function resetBall(){
+    ball.speed = 1;
     ball.x = canvas.width/2;
     ball.y = canvas.height/2;
     ball.velocityX = -ball.velocityX;
 }
 
-function update(){
+function update(){ 
     if (keys[38] && player2.y > 0)  {
         player2.y -= 10;
     }
@@ -109,8 +112,9 @@ function update(){
             restart();
         }
     }
-    ball.x += ball.velocityX;
-    ball.y += ball.velocityY;
+    ball.speed += 0.0005;
+    ball.x += ball.velocityX * ball.speed;
+    ball.y += ball.velocityY * ball.speed;
 
     if(ball.y + ball.r > canvas.height || ball.y - ball.r < 0){
         ball.velocityY = -ball.velocityY;
@@ -142,17 +146,16 @@ function render() {
 function start(){
     enabled = true;
     document.getElementById("startButton").style.display = "none";
-    document.getElementById("terminateMsg").style.display = "block";
-    
+    document.getElementById("terminateMsg").style.display = "block";   
 }
 
 function restart(){
     location.reload();
-
 }
 
 function game() {
     if (enabled == true){
+        drawBall();
         update();
         render();
     }else if(player1.score > 0 || player2.score > 0){
@@ -175,4 +178,4 @@ function game() {
 
 update();
 render();
-var interval = setInterval(game, 1000/speed)
+var interval = setInterval(game, 1000/speed);

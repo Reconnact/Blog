@@ -177,3 +177,24 @@ a {
     color: rgba(0, 0, 0, 0.65);
     transform: translateY(0);
 }
+
+.backBtn {
+    text-decoration: none;
+    color: rgb(174, 0, 255);
+    display: inline-block;
+    transition: 300ms;
+}
+  
+.backBtn:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #019fb6;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+  
+.backBtn:hover:after {
+    color: rgb(203, 110, 247);
+    transform: scaleX(1);
+    cursor: pointer;
+}
